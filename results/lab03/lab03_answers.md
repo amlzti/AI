@@ -6,7 +6,7 @@ Script: `all_experiments/lab03_search_engineering.py` · CLI: `all_experiments/u
 
 | Check | Result |
 |---|---|
-| `python -m pytest utils -q` | **8 passed** (`pytest_output.txt`) |
+| `python -m pytest utils -q` | **8 passed** (`pytest_output.txt`, screenshot `pytest_8_passed.png`) |
 | `python -m utils --algorithm astar --start KUL --goal KEF` | hops=4, cost=11,461.3 km, expanded=69 — KUL -> HKT -> LED -> HEL -> KEF (`cli_kul_kef.txt`) |
 | `python -m utils --algorithm astar --start JFK --goal SYD` | hops=2, cost=16,035.3 km, expanded=21 — JFK -> LAX -> SYD (`cli_jfk_syd.txt`) |
 | A* cost equals UCS on all 10 queries | True |
