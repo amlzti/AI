@@ -1,0 +1,2 @@
+﻿ASTAR: found=True, hops=2, cost_km=16035.3, expanded=21, runtime_ms=22.53
+JFK -> LAX -> SYD

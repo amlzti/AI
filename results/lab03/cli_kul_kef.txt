@@ -1,0 +1,2 @@
+﻿ASTAR: found=True, hops=4, cost_km=11461.3, expanded=69, runtime_ms=22.02
+KUL -> HKT -> LED -> HEL -> KEF
