@@ -1,0 +1,41 @@
+﻿
+=== Question 1: Clean the data ===
+Rows: 9357
+               usable rows
+T                     8991
+RH                    8991
+CO(GT)                7674
+PT08.S1(CO)           8991
+PT08.S2(NMHC)         8991
+
+=== Question 2: Build the fuzzy controller ===
+Worked example from the lecture: 15 deg C, 45 % humidity -> 40.4 % ventilation
+Try it yourself: 28 deg C, 60 % humidity -> 55.5 % ventilation
+
+=== Question 3: Validate the rule base ===
+   T_C  RH_pct expected  ventilation_pct
+0   10      30      low             18.9
+1   20      50   medium             50.0
+2   35      50     high             82.3
+3   25      80     high             83.8
+4   40      80     high             84.2
+
+=== Question 4: Prepare the ANFIS task ===
+{'usable_rows': 7344, 'train': 5140, 'validation': 1102, 'test': 1102}
+
+=== Question 5: Fit two model classes ===
+               model  validation_rmse  validation_mae  test_rmse  test_mae
+0  Linear regression           0.5103          0.3722     0.5365    0.3821
+1          ANFIS-2MF           0.4550          0.3195     0.4715    0.3264
+2          ANFIS-3MF           0.4489          0.3144     0.4672    0.3246
+Selected by validation RMSE: ANFIS-3MF
+
+=== Question 6: Evaluate once on the test data ===
+                   test_rmse  test_mae
+model                                 
+Linear regression     0.5365    0.3821
+ANFIS-3MF             0.4672    0.3246
+Test RMSE improvement over linear regression: 12.9%
+Saved: ['fuzzy_control_surface.png', 'fuzzy_fixed_points.csv', 'fuzzy_memberships.png', 'metrics.csv', 'predicted_vs_actual.png', 'split.csv', 'temperature_humidity.png']
+
+Lab 4 complete.
